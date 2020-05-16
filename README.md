@@ -1,13 +1,20 @@
 ## Create Genesis Block Proof of Work with Node.js
 
-**Tested with Node.js version 12.x.x**
+**Tested with Node.js version 14.x.x**
 
 ## setup
 
 ```js
-git clone https://github.com/nasa8x/node-genesis-block.git genesis-block
+git clone https://github.com/d3cod3/node-genesis-block.git genesis-block
 cd genesis-block
 npm install
+```
+
+if node error on MacOS try:
+
+```bash
+brew upgrade
+brew cleanup
 ```
 
 ## help
@@ -57,6 +64,22 @@ npm install
 * yescrypt
 * fresh
 
+## sha256d
+
+```js
+node genesis -a sha256d -z "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+---------------
+// result:
+algorithm: sha256d
+pzTimestamp: The Times 03/Jan/2009 Chancellor on brink of second bailout for banks
+pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
+bits: 504365040
+time: 1589616203
+merkle root hash: 50a42f92919c3b5194f997e33aace61efb813f8f936cd0e2127eed5f61a513e9
+Searching for genesis hash...
+nonce: 936350
+genesis hash: 00000162e37cce671bdca5d68efdfb19f2595cb3c7578b387389f167cb10e7ff
+```
 
 ## x11
 

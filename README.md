@@ -40,7 +40,7 @@ brew cleanup
 
 ## algorithms
 ----------
-* bitcoin/sha256d
+* sha256d
 * x11
 * x13
 * x15

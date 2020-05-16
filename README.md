@@ -66,10 +66,10 @@ brew cleanup
 
 ## sha256d
 
-```js
+```bash
 node genesis -a sha256d -z "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
----------------
-// result:
+#---------------
+# result:
 algorithm: sha256d
 pzTimestamp: The Times 03/Jan/2009 Chancellor on brink of second bailout for banks
 pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
@@ -83,10 +83,10 @@ genesis hash: 00000162e37cce671bdca5d68efdfb19f2595cb3c7578b387389f167cb10e7ff
 
 ## x11
 
-```js
+```bash
 node genesis -a x11 -z "Don't work for weekends, work for our goals - 18/Jan/2018." -p "04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f"
----------------
-// result:
+#---------------
+# result:
 algorithm: x11
 pzTimestamp: Don't work for weekends, work for our goals - 18/Jan/2018.
 pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
@@ -99,10 +99,10 @@ genesis hash: 0000084e98003628c45719136940cf7068805f4024419a51d6259fb676c299da
 
 ```
 ## quark
-```js
+```bash
 node genesis -a quark
----------------
-// result:
+#---------------
+# result:
 algorithm: quark
 pzTimestamp: Don't work for weekends, work for our goals.
 pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
@@ -115,9 +115,10 @@ genesis hash: 00000a560e5488e24c7b2d83a7fd1d707321d57d0b8aa8164f35c5e67ed3a0f0
 ```
 
 ## keccak
-```js
-nasa8x$ node genesis -a keccak -t 1521538330
----------------
+```bash
+node genesis -a keccak -t 1521538330
+#---------------
+# result:
 algorithm: keccak
 pzTimestamp: Don't work for weekends, work for our goals.
 pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
@@ -128,6 +129,3 @@ Searching for genesis hash...
 nonce: 1509118
 genesis hash: 0000040fceaa8f6eda22f0caecc8c59a6ed82012e640d1c77348e3bf6c8d706f
 ```
-
-## donate
-[![](https://i.imgur.com/z0p6RvA.png)](http://vrl.to/ec5cfbae)[![](https://i.imgur.com/bEUNBGz.png)](http://vrl.to/ec5cfbae)

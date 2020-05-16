@@ -74,7 +74,7 @@ function createTx(options) {
 
     var input = createInputScript(options);
     var out = createOutputScript(options);
-   
+
     var size = 4    // tx version
         + 1   // number of inputs
         + 32  // hash of previous output
@@ -124,7 +124,7 @@ function createBlock(merkleRoot, options) {
     var block = Buffer.alloc(80);
     var position = 0;
 
-    block.writeInt32LE(1, position); //version  
+    block.writeInt32LE(1, position); //version
     block.write(Buffer.alloc(32).toString('hex'), position += 4, 32, 'hex'); //previousblockhash
     block.write(merkleRoot.toString('hex'), position += 32, 32, 'hex');
     block.writeInt32LE(options.time, position += 32);
@@ -144,8 +144,14 @@ function PoW(data, options) {
     console.log('Searching for genesis hash...');
     var nonce = options.nonce;
 
+    // Add sha256d from utils into Hash object
+    // We could just stuff it in there to begin with at the start
+    if (options.algorithm === "sha256d") {
+	     Hash[options.algorithm] = $.sha256d;
+    }
+
     //var target = $.numToBytes((options.bits & 0xffffff) * 2 ** (8 * ((options.bits >> 24) - 3)));
-    // console.log('' + target.toString('hex'));    
+    // console.log('' + target.toString('hex'));
 
     while (true) {
 
